@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ABF81F45192D66CD0019BE7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF81F44192D66CD0019BE7E /* Foundation.framework */; };
+		ABF81F47192D66CD0019BE7E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF81F46192D66CD0019BE7E /* CoreGraphics.framework */; };
+		ABF81F49192D66CD0019BE7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF81F48192D66CD0019BE7E /* UIKit.framework */; };
+		ABF81F4F192D66CD0019BE7E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ABF81F4D192D66CD0019BE7E /* InfoPlist.strings */; };
+		ABF81F51192D66CD0019BE7E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF81F50192D66CD0019BE7E /* main.m */; };
+		ABF81F55192D66CD0019BE7E /* MLKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF81F54192D66CD0019BE7E /* MLKAppDelegate.m */; };
+		ABF81F58192D66CD0019BE7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABF81F56192D66CD0019BE7E /* Main.storyboard */; };
+		ABF81F5B192D66CD0019BE7E /* MLKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF81F5A192D66CD0019BE7E /* MLKViewController.m */; };
+		ABF81F5D192D66CD0019BE7E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABF81F5C192D66CD0019BE7E /* Images.xcassets */; };
+		ABF81F64192D66CD0019BE7E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF81F63192D66CD0019BE7E /* XCTest.framework */; };
+		ABF81F65192D66CD0019BE7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF81F44192D66CD0019BE7E /* Foundation.framework */; };
+		ABF81F66192D66CD0019BE7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF81F48192D66CD0019BE7E /* UIKit.framework */; };
+		ABF81F6E192D66CD0019BE7E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ABF81F6C192D66CD0019BE7E /* InfoPlist.strings */; };
+		ABF81F70192D66CD0019BE7E /* Cost_estimatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF81F6F192D66CD0019BE7E /* Cost_estimatorTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ABF81F67192D66CD0019BE7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABF81F39192D66CD0019BE7E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABF81F40192D66CD0019BE7E;
+			remoteInfo = "Cost estimator";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ABF81F41192D66CD0019BE7E /* Cost estimator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cost estimator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABF81F44192D66CD0019BE7E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ABF81F46192D66CD0019BE7E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		ABF81F48192D66CD0019BE7E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		ABF81F4C192D66CD0019BE7E /* Cost estimator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Cost estimator-Info.plist"; sourceTree = "<group>"; };
+		ABF81F4E192D66CD0019BE7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ABF81F50192D66CD0019BE7E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ABF81F52192D66CD0019BE7E /* Cost estimator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cost estimator-Prefix.pch"; sourceTree = "<group>"; };
+		ABF81F53192D66CD0019BE7E /* MLKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLKAppDelegate.h; sourceTree = "<group>"; };
+		ABF81F54192D66CD0019BE7E /* MLKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLKAppDelegate.m; sourceTree = "<group>"; };
+		ABF81F57192D66CD0019BE7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ABF81F59192D66CD0019BE7E /* MLKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLKViewController.h; sourceTree = "<group>"; };
+		ABF81F5A192D66CD0019BE7E /* MLKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLKViewController.m; sourceTree = "<group>"; };
+		ABF81F5C192D66CD0019BE7E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		ABF81F62192D66CD0019BE7E /* Cost estimatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cost estimatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABF81F63192D66CD0019BE7E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		ABF81F6B192D66CD0019BE7E /* Cost estimatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Cost estimatorTests-Info.plist"; sourceTree = "<group>"; };
+		ABF81F6D192D66CD0019BE7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ABF81F6F192D66CD0019BE7E /* Cost_estimatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cost_estimatorTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ABF81F3E192D66CD0019BE7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABF81F47192D66CD0019BE7E /* CoreGraphics.framework in Frameworks */,
+				ABF81F49192D66CD0019BE7E /* UIKit.framework in Frameworks */,
+				ABF81F45192D66CD0019BE7E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABF81F5F192D66CD0019BE7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABF81F64192D66CD0019BE7E /* XCTest.framework in Frameworks */,
+				ABF81F66192D66CD0019BE7E /* UIKit.framework in Frameworks */,
+				ABF81F65192D66CD0019BE7E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ABF81F38192D66CD0019BE7E = {
+			isa = PBXGroup;
+			children = (
+				ABF81F4A192D66CD0019BE7E /* Cost estimator */,
+				ABF81F69192D66CD0019BE7E /* Cost estimatorTests */,
+				ABF81F43192D66CD0019BE7E /* Frameworks */,
+				ABF81F42192D66CD0019BE7E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ABF81F42192D66CD0019BE7E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABF81F41192D66CD0019BE7E /* Cost estimator.app */,
+				ABF81F62192D66CD0019BE7E /* Cost estimatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABF81F43192D66CD0019BE7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABF81F44192D66CD0019BE7E /* Foundation.framework */,
+				ABF81F46192D66CD0019BE7E /* CoreGraphics.framework */,
+				ABF81F48192D66CD0019BE7E /* UIKit.framework */,
+				ABF81F63192D66CD0019BE7E /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ABF81F4A192D66CD0019BE7E /* Cost estimator */ = {
+			isa = PBXGroup;
+			children = (
+				ABF81F53192D66CD0019BE7E /* MLKAppDelegate.h */,
+				ABF81F54192D66CD0019BE7E /* MLKAppDelegate.m */,
+				ABF81F56192D66CD0019BE7E /* Main.storyboard */,
+				ABF81F59192D66CD0019BE7E /* MLKViewController.h */,
+				ABF81F5A192D66CD0019BE7E /* MLKViewController.m */,
+				ABF81F5C192D66CD0019BE7E /* Images.xcassets */,
+				ABF81F4B192D66CD0019BE7E /* Supporting Files */,
+			);
+			path = "Cost estimator";
+			sourceTree = "<group>";
+		};
+		ABF81F4B192D66CD0019BE7E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ABF81F4C192D66CD0019BE7E /* Cost estimator-Info.plist */,
+				ABF81F4D192D66CD0019BE7E /* InfoPlist.strings */,
+				ABF81F50192D66CD0019BE7E /* main.m */,
+				ABF81F52192D66CD0019BE7E /* Cost estimator-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ABF81F69192D66CD0019BE7E /* Cost estimatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				ABF81F6F192D66CD0019BE7E /* Cost_estimatorTests.m */,
+				ABF81F6A192D66CD0019BE7E /* Supporting Files */,
+			);
+			path = "Cost estimatorTests";
+			sourceTree = "<group>";
+		};
+		ABF81F6A192D66CD0019BE7E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ABF81F6B192D66CD0019BE7E /* Cost estimatorTests-Info.plist */,
+				ABF81F6C192D66CD0019BE7E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ABF81F40192D66CD0019BE7E /* Cost estimator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABF81F73192D66CD0019BE7E /* Build configuration list for PBXNativeTarget "Cost estimator" */;
+			buildPhases = (
+				ABF81F3D192D66CD0019BE7E /* Sources */,
+				ABF81F3E192D66CD0019BE7E /* Frameworks */,
+				ABF81F3F192D66CD0019BE7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cost estimator";
+			productName = "Cost estimator";
+			productReference = ABF81F41192D66CD0019BE7E /* Cost estimator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ABF81F61192D66CD0019BE7E /* Cost estimatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABF81F76192D66CD0019BE7E /* Build configuration list for PBXNativeTarget "Cost estimatorTests" */;
+			buildPhases = (
+				ABF81F5E192D66CD0019BE7E /* Sources */,
+				ABF81F5F192D66CD0019BE7E /* Frameworks */,
+				ABF81F60192D66CD0019BE7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ABF81F68192D66CD0019BE7E /* PBXTargetDependency */,
+			);
+			name = "Cost estimatorTests";
+			productName = "Cost estimatorTests";
+			productReference = ABF81F62192D66CD0019BE7E /* Cost estimatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ABF81F39192D66CD0019BE7E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MLK;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "___kozi___";
+				TargetAttributes = {
+					ABF81F61192D66CD0019BE7E = {
+						TestTargetID = ABF81F40192D66CD0019BE7E;
+					};
+				};
+			};
+			buildConfigurationList = ABF81F3C192D66CD0019BE7E /* Build configuration list for PBXProject "Cost estimator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ABF81F38192D66CD0019BE7E;
+			productRefGroup = ABF81F42192D66CD0019BE7E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ABF81F40192D66CD0019BE7E /* Cost estimator */,
+				ABF81F61192D66CD0019BE7E /* Cost estimatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ABF81F3F192D66CD0019BE7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABF81F5D192D66CD0019BE7E /* Images.xcassets in Resources */,
+				ABF81F4F192D66CD0019BE7E /* InfoPlist.strings in Resources */,
+				ABF81F58192D66CD0019BE7E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABF81F60192D66CD0019BE7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABF81F6E192D66CD0019BE7E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ABF81F3D192D66CD0019BE7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABF81F51192D66CD0019BE7E /* main.m in Sources */,
+				ABF81F5B192D66CD0019BE7E /* MLKViewController.m in Sources */,
+				ABF81F55192D66CD0019BE7E /* MLKAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABF81F5E192D66CD0019BE7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABF81F70192D66CD0019BE7E /* Cost_estimatorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ABF81F68192D66CD0019BE7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABF81F40192D66CD0019BE7E /* Cost estimator */;
+			targetProxy = ABF81F67192D66CD0019BE7E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ABF81F4D192D66CD0019BE7E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABF81F4E192D66CD0019BE7E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		ABF81F56192D66CD0019BE7E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABF81F57192D66CD0019BE7E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ABF81F6C192D66CD0019BE7E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABF81F6D192D66CD0019BE7E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ABF81F71192D66CD0019BE7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ABF81F72192D66CD0019BE7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ABF81F74192D66CD0019BE7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Cost estimator/Cost estimator-Prefix.pch";
+				INFOPLIST_FILE = "Cost estimator/Cost estimator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		ABF81F75192D66CD0019BE7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Cost estimator/Cost estimator-Prefix.pch";
+				INFOPLIST_FILE = "Cost estimator/Cost estimator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		ABF81F77192D66CD0019BE7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Cost estimator.app/Cost estimator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Cost estimator/Cost estimator-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Cost estimatorTests/Cost estimatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		ABF81F78192D66CD0019BE7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Cost estimator.app/Cost estimator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Cost estimator/Cost estimator-Prefix.pch";
+				INFOPLIST_FILE = "Cost estimatorTests/Cost estimatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ABF81F3C192D66CD0019BE7E /* Build configuration list for PBXProject "Cost estimator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABF81F71192D66CD0019BE7E /* Debug */,
+				ABF81F72192D66CD0019BE7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABF81F73192D66CD0019BE7E /* Build configuration list for PBXNativeTarget "Cost estimator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABF81F74192D66CD0019BE7E /* Debug */,
+				ABF81F75192D66CD0019BE7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ABF81F76192D66CD0019BE7E /* Build configuration list for PBXNativeTarget "Cost estimatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABF81F77192D66CD0019BE7E /* Debug */,
+				ABF81F78192D66CD0019BE7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ABF81F39192D66CD0019BE7E /* Project object */;
+}
