@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ABAB7C8D1936A5540000F60C /* MLKTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAB7C8C1936A5540000F60C /* MLKTableViewController.m */; };
+		ABAB7C901936B2B60000F60C /* MLKJob.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAB7C8F1936B2B60000F60C /* MLKJob.m */; };
 		ABF81F45192D66CD0019BE7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF81F44192D66CD0019BE7E /* Foundation.framework */; };
 		ABF81F47192D66CD0019BE7E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF81F46192D66CD0019BE7E /* CoreGraphics.framework */; };
 		ABF81F49192D66CD0019BE7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF81F48192D66CD0019BE7E /* UIKit.framework */; };
@@ -34,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ABAB7C8B1936A5540000F60C /* MLKTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLKTableViewController.h; sourceTree = "<group>"; };
+		ABAB7C8C1936A5540000F60C /* MLKTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLKTableViewController.m; sourceTree = "<group>"; };
+		ABAB7C8E1936B2B60000F60C /* MLKJob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLKJob.h; sourceTree = "<group>"; };
+		ABAB7C8F1936B2B60000F60C /* MLKJob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLKJob.m; sourceTree = "<group>"; };
 		ABF81F41192D66CD0019BE7E /* Cost estimator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cost estimator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF81F44192D66CD0019BE7E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ABF81F46192D66CD0019BE7E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -115,10 +121,14 @@
 				ABF81F53192D66CD0019BE7E /* MLKAppDelegate.h */,
 				ABF81F54192D66CD0019BE7E /* MLKAppDelegate.m */,
 				ABF81F56192D66CD0019BE7E /* Main.storyboard */,
+				ABAB7C8B1936A5540000F60C /* MLKTableViewController.h */,
+				ABAB7C8C1936A5540000F60C /* MLKTableViewController.m */,
 				ABF81F59192D66CD0019BE7E /* MLKViewController.h */,
 				ABF81F5A192D66CD0019BE7E /* MLKViewController.m */,
 				ABF81F5C192D66CD0019BE7E /* Images.xcassets */,
 				ABF81F4B192D66CD0019BE7E /* Supporting Files */,
+				ABAB7C8E1936B2B60000F60C /* MLKJob.h */,
+				ABAB7C8F1936B2B60000F60C /* MLKJob.m */,
 			);
 			path = "Cost estimator";
 			sourceTree = "<group>";
@@ -251,7 +261,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABF81F51192D66CD0019BE7E /* main.m in Sources */,
+				ABAB7C901936B2B60000F60C /* MLKJob.m in Sources */,
 				ABF81F5B192D66CD0019BE7E /* MLKViewController.m in Sources */,
+				ABAB7C8D1936A5540000F60C /* MLKTableViewController.m in Sources */,
 				ABF81F55192D66CD0019BE7E /* MLKAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,6 +469,7 @@
 				ABF81F75192D66CD0019BE7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ABF81F76192D66CD0019BE7E /* Build configuration list for PBXNativeTarget "Cost estimatorTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +478,7 @@
 				ABF81F78192D66CD0019BE7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

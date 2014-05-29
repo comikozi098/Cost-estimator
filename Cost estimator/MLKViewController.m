@@ -7,6 +7,7 @@
 //
 
 #import "MLKViewController.h"
+#import "MLKJob.h"
 
 @interface MLKViewController ()
 
@@ -28,22 +29,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 - (IBAction)estimatePrice:(id)sender {
     
+    MLKJob *newJob = [[MLKJob alloc] init];
+    newJob.roomLarge = [roomLarge.text intValue ];
+    newJob.roomMedium = [roomMedium.text intValue];
+    newJob.roomSmall = [roomSmall.text intValue];
+    newJob.employees = [employees.text intValue];
+    newJob.distence = [distence.text intValue];
+    newJob.daysNeeded = [daysNeeded.text intValue];
     
-    int rooms = 0;
-    int workers = 0;
-    int dist = 0;
-    int days = 0;
-    int total = 0;
-    
-    rooms = ([roomLarge.text intValue ]*2) + ([roomMedium.text intValue]*1.5) + [roomSmall.text intValue];
-    workers = [employees.text intValue ];
-    dist = [distence.text intValue];
-    days = [daysNeeded.text intValue];
-    total = (rooms + ((15*workers*8)*days) + (((dist*2*days)/18)*3.50));
-    
-    totalLabel.text = [NSString stringWithFormat:@"%d to meet Baseline price",total];
+    float total = [newJob total];
+    totalLabel.text = [NSString stringWithFormat:@"$ %.2f to meet Baseline price",total];
     
 }
 
