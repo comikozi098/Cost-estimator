@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface MLKTableViewController : UITableViewController
+#import "MLKViewController.h"
+@interface MLKTableViewController : UITableViewController <UIAlertViewDelegate, MLKViewControllerDelegate,UITableViewDataSource, UITableViewDelegate>
 
 @end

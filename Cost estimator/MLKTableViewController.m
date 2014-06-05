@@ -7,27 +7,54 @@
 //
 
 #import "MLKTableViewController.h"
-
+#import "MLKJob.h"
 @interface MLKTableViewController ()
-
+@property (strong, nonatomic) NSMutableArray *jobs;
 @end
 
 @implementation MLKTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        self.navigationItem.title = @"Projects";
-    }
+- (NSString *)resourcePath {
+    return [NSBundle.mainBundle.resourcePath  stringByAppendingPathComponent:@"jobs"];
+}
 
-    return self;
+- (void)createJob:(NSString *)job withTotalLabel:(UILabel *)totalLabel {
+    MLKJob *item = [[MLKJob alloc] init];
+    item.projectTitle = job;
+    [self.jobs addObject:item];
+    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"projectTitle" ascending:YES];
+    [self.jobs sortUsingDescriptors:@[sortDescriptor]];
+    
+    [NSKeyedArchiver archiveRootObject:self.jobs toFile:self.resourcePath];
+    
+    [self.tableView reloadData];
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
+- (void)updateJob:(NSString *)job withTotalLabel:(UILabel *)totalLabel atRow:(NSUInteger)row {
+    
+    MLKJob *item = [[MLKJob alloc] init];
+    item.projectTitle = job;
+    [self.jobs replaceObjectAtIndex:row withObject:item];
+    
+    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"dueDate" ascending:YES];
+    [self.jobs sortUsingDescriptors:@[sortDescriptor]];
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSData *jobData = [NSKeyedArchiver archivedDataWithRootObject:self.jobs];
+    [userDefaults setObject:jobData forKey:@"jobs"];
+    [userDefaults synchronize];
+    
+    
+    [self.tableView reloadData];
+    [self.navigationController popViewControllerAnimated:YES];
+    
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -45,34 +72,34 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return 5;
+    return self.jobs.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MainCell" ];
-    
-    if(cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MainCell"];
-    }
-    
-    NSString *cellText = [NSString stringWithFormat:@"Nothing %d",indexPath.row];
-    cell.textLabel.text = cellText;
+    static NSString *CellIdentifier =@"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    MLKJob *job = self.jobs[indexPath.row];
+    cell.textLabel.text = job.projectTitle;
     
     return cell;
 }
 
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    
-     if(section == 0) return @"section 1"; else return @"section 2";
-    
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self.jobs removeObjectAtIndex:indexPath.row];
+        
+        [NSKeyedArchiver archiveRootObject:self.jobs toFile:self.resourcePath];
+        
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
 }
 
 

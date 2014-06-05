@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MLKJob : NSObject
+@interface MLKJob : NSObject<NSCoding>
 @property (assign, nonatomic) int roomLarge;
 @property (assign, nonatomic) int roomMedium;
 @property (assign, nonatomic) int roomSmall;
