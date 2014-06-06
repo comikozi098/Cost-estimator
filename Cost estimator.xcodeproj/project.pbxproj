@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AB494306194111BE00AD3DDF /* ForSavedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB494305194111BE00AD3DDF /* ForSavedViewController.m */; };
 		ABAB7C8D1936A5540000F60C /* MLKTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAB7C8C1936A5540000F60C /* MLKTableViewController.m */; };
 		ABAB7C901936B2B60000F60C /* MLKJob.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAB7C8F1936B2B60000F60C /* MLKJob.m */; };
 		ABF81F45192D66CD0019BE7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF81F44192D66CD0019BE7E /* Foundation.framework */; };
@@ -37,8 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AB494304194111BE00AD3DDF /* ForSavedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ForSavedViewController.h; path = ../ForSavedViewController.h; sourceTree = "<group>"; };
-		AB494305194111BE00AD3DDF /* ForSavedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ForSavedViewController.m; path = ../ForSavedViewController.m; sourceTree = "<group>"; };
 		ABAB7C8B1936A5540000F60C /* MLKTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLKTableViewController.h; sourceTree = "<group>"; };
 		ABAB7C8C1936A5540000F60C /* MLKTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLKTableViewController.m; sourceTree = "<group>"; };
 		ABAB7C8E1936B2B60000F60C /* MLKJob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLKJob.h; sourceTree = "<group>"; };
@@ -128,8 +125,6 @@
 				ABAB7C8C1936A5540000F60C /* MLKTableViewController.m */,
 				ABF81F59192D66CD0019BE7E /* MLKViewController.h */,
 				ABF81F5A192D66CD0019BE7E /* MLKViewController.m */,
-				AB494304194111BE00AD3DDF /* ForSavedViewController.h */,
-				AB494305194111BE00AD3DDF /* ForSavedViewController.m */,
 				ABF81F5C192D66CD0019BE7E /* Images.xcassets */,
 				ABF81F4B192D66CD0019BE7E /* Supporting Files */,
 				ABAB7C8E1936B2B60000F60C /* MLKJob.h */,
@@ -269,7 +264,6 @@
 				ABAB7C901936B2B60000F60C /* MLKJob.m in Sources */,
 				ABF81F5B192D66CD0019BE7E /* MLKViewController.m in Sources */,
 				ABAB7C8D1936A5540000F60C /* MLKTableViewController.m in Sources */,
-				AB494306194111BE00AD3DDF /* ForSavedViewController.m in Sources */,
 				ABF81F55192D66CD0019BE7E /* MLKAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

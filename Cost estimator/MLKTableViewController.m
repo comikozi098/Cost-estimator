@@ -8,7 +8,7 @@
 
 #import "MLKTableViewController.h"
 #import "MLKJob.h"
-#import "ForSavedViewController.h"
+
 @interface MLKTableViewController ()
 @property (strong, nonatomic) NSMutableArray *jobs;
 @end
@@ -36,9 +36,13 @@
         vc.delegate = self;
     }
     if ([[segue identifier] isEqualToString:@"EditSegue"]) {
-        ForSavedViewController *vc = (ForSavedViewController *)segue.destinationViewController;
-        vc.delegate = self;
+        MLKViewController *vc = (MLKViewController *)segue.destinationViewController;
+       // vc.job = ;
+       //need to pass job in detail view controller
+        
     }
+    
+   
 }
 - (void)createJob:(NSString *)job withTotalLabel:(UILabel *)totalLabel {
     MLKJob *item = [[MLKJob alloc] init];
