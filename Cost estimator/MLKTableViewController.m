@@ -8,16 +8,38 @@
 
 #import "MLKTableViewController.h"
 #import "MLKJob.h"
+#import "ForSavedViewController.h"
 @interface MLKTableViewController ()
 @property (strong, nonatomic) NSMutableArray *jobs;
 @end
 
 @implementation MLKTableViewController
 
+- (void)viewDidLoad {
+    
+    [super viewDidLoad];
+    self.jobs = [NSKeyedUnarchiver unarchiveObjectWithFile:self.resourcePath];
+    if (!self.jobs) {
+        self.jobs = [[NSMutableArray alloc] init];
+    
+}
+}
+
 - (NSString *)resourcePath {
     return [NSBundle.mainBundle.resourcePath  stringByAppendingPathComponent:@"jobs"];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([[segue identifier] isEqualToString:@"AddNewSegue"]) {
+        MLKViewController *vc = (MLKViewController *)segue.destinationViewController;
+        vc.delegate = self;
+    }
+    if ([[segue identifier] isEqualToString:@"EditSegue"]) {
+        ForSavedViewController *vc = (ForSavedViewController *)segue.destinationViewController;
+        vc.delegate = self;
+    }
+}
 - (void)createJob:(NSString *)job withTotalLabel:(UILabel *)totalLabel {
     MLKJob *item = [[MLKJob alloc] init];
     item.projectTitle = job;
@@ -52,15 +74,7 @@
     
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -82,8 +96,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     static NSString *CellIdentifier =@"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    }
+
     MLKJob *job = self.jobs[indexPath.row];
     cell.textLabel.text = job.projectTitle;
     
